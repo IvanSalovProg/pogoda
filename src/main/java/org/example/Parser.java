@@ -37,7 +37,7 @@ public class Parser {
             }
         }
             for (int i = 0; i < iterationCount; i++) {
-                Element valueLine = values.get(index);
+                Element valueLine = values.get(index + i);
                 for (Element td : valueLine.select("td")) {
                     System.out.print(td.text() + "     ");
                 }
@@ -59,8 +59,9 @@ public class Parser {
             String dateString = name.select("th[id=dt]").text();
             String date = getDateFromString(dateString);
             System.out.println(date + "  Явления  Температура   Давление   Влажность  Ветер");
-          int iterationCount = printPartValues(values,index);
-          index = index + iterationCount;
+          printPartValues(values,index);
+          //  int iterationCount =
+         // index = index + iterationCount;
         }
     }
 }
