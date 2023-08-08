@@ -31,7 +31,7 @@ public class Parser {
         int iterationCount = 4;
         if (index == 0) {
             Element valueLn = values.get(3);
-            boolean isMorning = valueLn.text().contains("Утро");
+            boolean isMorning = valueLn.text().contains("РЈС‚СЂРѕ");
             if (isMorning) {
                 iterationCount = 3;
             }
@@ -58,7 +58,7 @@ public class Parser {
         for(Element name: names) {
             String dateString = name.select("th[id=dt]").text();
             String date = getDateFromString(dateString);
-            System.out.println(date + "  Явления  Температура   Давление   Влажность  Ветер");
+            System.out.println(date + "  РЇРІР»РµРЅРёСЏ  РўРµРјРїРµСЂР°С‚СѓСЂР°   Р”Р°РІР»РµРЅРёРµ   Р’Р»Р°Р¶РЅРѕСЃС‚СЊ  Р’РµС‚РµСЂ");
           printPartValues(values,index);
           //  int iterationCount =
          // index = index + iterationCount;
